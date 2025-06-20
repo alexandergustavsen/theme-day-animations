@@ -1,8 +1,9 @@
-import { StyleSheet } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { ThemedText } from "@/components/ThemedText";
+import { router } from "expo-router";
 
 export default function TabTwoScreen() {
   return (
@@ -21,6 +22,16 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
       <ThemedText type="subtitle">Theme day: Animations</ThemedText>
+      <ThemedView>
+        <Pressable onPress={() => router.push(`/explore-buttons`)}>
+          <ThemedView style={styles.categoryContainer}>
+            <ThemedText type="subtitle">Buttons </ThemedText>
+            <ThemedText>
+              Explore various button animations using Reanimated.
+            </ThemedText>
+          </ThemedView>
+        </Pressable>
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -31,6 +42,10 @@ const styles = StyleSheet.create({
     bottom: -90,
     left: -35,
     position: "absolute",
+  },
+  categoryContainer: {
+    gap: 8,
+    marginBottom: 8,
   },
   titleContainer: {
     flexDirection: "row",

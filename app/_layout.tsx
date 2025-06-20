@@ -39,6 +39,10 @@ export default function RootLayout() {
             name="skia-demo"
             options={{ headerTitle: "Skia Demo" }}
           />
+          <Stack.Screen
+            name="explore-buttons"
+            options={{ headerTitle: "Buttons" }}
+          />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />

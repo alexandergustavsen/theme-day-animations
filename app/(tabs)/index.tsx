@@ -24,7 +24,7 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedText type="subtitle">Theme day: Animations</ThemedText>
       <Pressable onPress={() => router.push(`/reanimated-demo`)}>
-        <ThemedView style={styles.stepContainer}>
+        <ThemedView style={styles.demoContainer}>
           <ThemedText type="subtitle">Demo 1: Reanimated </ThemedText>
           <ThemedText>
             Animate a box’s opacity and position using shared values and timing
@@ -33,7 +33,7 @@ export default function HomeScreen() {
         </ThemedView>
       </Pressable>
       <Pressable onPress={() => router.push(`/skia-demo`)}>
-        <ThemedView style={styles.stepContainer}>
+        <ThemedView style={styles.demoContainer}>
           <ThemedText type="subtitle">Demo 2: Skia</ThemedText>
           <ThemedText>
             Animate a custom circle graphic using Skia and shared values.
@@ -41,7 +41,7 @@ export default function HomeScreen() {
         </ThemedView>
       </Pressable>
       <Pressable onPress={() => router.push(`/advanced-demo`)}>
-        <ThemedView style={styles.stepContainer}>
+        <ThemedView style={styles.demoContainer}>
           <ThemedText type="subtitle">Demo 3: Advanced Animations</ThemedText>
           <ThemedText>
             This demo showcases a swipe-to-dismiss animation by combining
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 8,
   },
-  stepContainer: {
+  demoContainer: {
     gap: 8,
     marginBottom: 8,
   },
