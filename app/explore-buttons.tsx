@@ -11,7 +11,6 @@ import Animated, {
 } from "react-native-reanimated";
 
 const BUTTON_HEIGHT = 64;
-const BACKGROUND_COLOR = "#3498db";
 
 export default function ExploreButtonsScreen() {
   return (
@@ -30,7 +29,7 @@ const BounceButton = () => {
   const animatedStyle = useAnimatedStyle(() => {
     return {
       transform: [{ scale: scale.value }],
-      backgroundColor: BACKGROUND_COLOR,
+      backgroundColor: "#3498DB",
     };
   });
 
@@ -52,7 +51,7 @@ const RippleButton = () => {
   const animatedStyle = useAnimatedStyle(() => {
     return {
       transform: [{ scale: scale.value }],
-      backgroundColor: BACKGROUND_COLOR,
+      backgroundColor: "#F39C12",
     };
   });
 
@@ -76,7 +75,7 @@ const FlashButton = () => {
       backgroundColor: interpolateColor(
         bgColor.value,
         [0, 1],
-        ["#3498db", "#2ecc71"]
+        ["#9B59B6", "#2ECC71"]
       ),
     };
   });
@@ -98,15 +97,11 @@ const RotateButton = () => {
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ rotate: `${rotate.value}deg` }],
+    backgroundColor: "#2ECC71",
   }));
 
-  const onPressIn = () => {
-    rotate.value = withTiming(30, { duration: 150 });
-  };
-
-  const onPressOut = () => {
-    rotate.value = withTiming(0, { duration: 150 });
-  };
+  const onPressIn = () => (rotate.value = withTiming(30, { duration: 150 }));
+  const onPressOut = () => (rotate.value = withTiming(0, { duration: 150 }));
 
   return (
     <Pressable onPressIn={onPressIn} onPressOut={onPressOut}>
@@ -127,7 +122,6 @@ const styles = StyleSheet.create({
     height: BUTTON_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#3498db",
     borderRadius: 12,
   },
   text: {

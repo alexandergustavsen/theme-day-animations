@@ -13,7 +13,7 @@ export default function SkiaDemoScreen() {
 
   const color = useDerivedValue(
     () =>
-      interpolateColors(colorProgress.value, [0, 1], ["#3498db", "#e74c3c"]),
+      interpolateColors(colorProgress.value, [0, 1], ["#3498DB", "#9B59B6"]),
     [colorProgress]
   );
 
@@ -35,7 +35,7 @@ export default function SkiaDemoScreen() {
 
   return (
     <ThemedView style={styles.container}>
-      <Canvas style={{ width: 300, height: 300 }}>
+      <Canvas style={styles.canvas}>
         <Circle cx={150} cy={150} r={radius} color={color} />
       </Canvas>
       <ThemedView style={styles.buttonRow}>
@@ -54,6 +54,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  canvas: {
+    width: 300,
+    height: 300,
   },
   buttonRow: {
     flexDirection: "row",

@@ -25,7 +25,7 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Stack>
+        <Stack screenOptions={{ headerBackButtonDisplayMode: "minimal" }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen
             name="advanced-demo"
@@ -42,6 +42,18 @@ export default function RootLayout() {
           <Stack.Screen
             name="explore-buttons"
             options={{ headerTitle: "Buttons" }}
+          />
+          <Stack.Screen
+            name="explore-layouts"
+            options={{ headerTitle: "Layouts" }}
+          />
+          <Stack.Screen
+            name="explore-gestures"
+            options={{ headerTitle: "Gestures" }}
+          />
+          <Stack.Screen
+            name="explore-sandbox"
+            options={{ headerTitle: "Sandbox" }}
           />
           <Stack.Screen name="+not-found" />
         </Stack>

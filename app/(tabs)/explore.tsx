@@ -25,9 +25,36 @@ export default function TabTwoScreen() {
       <ThemedView>
         <Pressable onPress={() => router.push(`/explore-buttons`)}>
           <ThemedView style={styles.categoryContainer}>
-            <ThemedText type="subtitle">Buttons </ThemedText>
+            <ThemedText type="subtitle">Buttons</ThemedText>
             <ThemedText>
-              Explore various button animations using Reanimated.
+              Try out button animations that react to user interaction — tap,
+              press, and animate.
+            </ThemedText>
+          </ThemedView>
+        </Pressable>
+        <Pressable onPress={() => router.push(`/explore-layouts`)}>
+          <ThemedView style={styles.categoryContainer}>
+            <ThemedText type="subtitle">Layouts</ThemedText>
+            <ThemedText>
+              Explore various layout animations using Reanimated.
+            </ThemedText>
+          </ThemedView>
+        </Pressable>
+        <Pressable onPress={() => router.push(`/explore-gestures`)}>
+          <ThemedView style={styles.categoryContainer}>
+            <ThemedText type="subtitle">Gestures</ThemedText>
+            <ThemedText>
+              Combine user input with physics — drag, fling, and swipe using
+              gestures.
+            </ThemedText>
+          </ThemedView>
+        </Pressable>
+        <Pressable onPress={() => router.push(`/explore-sandbox`)}>
+          <ThemedView style={styles.categoryContainer}>
+            <ThemedText type="subtitle">Sandbox</ThemedText>
+            <ThemedText>
+              Test your creativity — build and demo anything fun using
+              animations and gestures.
             </ThemedText>
           </ThemedView>
         </Pressable>

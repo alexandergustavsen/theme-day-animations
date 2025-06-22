@@ -49,7 +49,7 @@ export default function SkiaDemoScreen() {
     <ThemedView style={styles.container}>
       <GestureDetector gesture={panGesture}>
         <Animated.View style={[styles.card, animatedStyle]}>
-          <ThemedText>Swipe me!</ThemedText>
+          <ThemedText type="title">Swipe me!</ThemedText>
         </Animated.View>
       </GestureDetector>
       <ThemedView style={styles.buttonWrapper}>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   card: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#3498DB",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 12,
