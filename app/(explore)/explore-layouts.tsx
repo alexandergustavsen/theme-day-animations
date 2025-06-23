@@ -10,7 +10,7 @@ import Animated, {
   SlideOutRight,
 } from "react-native-reanimated";
 
-export default function LayoutExploreScreen() {
+export default function ExploreLayoutsScreen() {
   return (
     <ThemedView style={styles.container}>
       <FadeBox />

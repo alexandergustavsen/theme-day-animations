@@ -16,10 +16,12 @@ export default function SkiaDemoScreen() {
   const translateX = useSharedValue(0);
   const cardHeight = useSharedValue(400);
   const opacity = useSharedValue(1);
+  const rotate = useSharedValue(0);
 
   const panGesture = Gesture.Pan()
     .onUpdate((e) => {
       translateX.value = e.translationX;
+      rotate.value = e.translationX / 20;
     })
     .onEnd(() => {
       if (Math.abs(translateX.value) > SWIPE_THRESHOLD) {
@@ -30,17 +32,22 @@ export default function SkiaDemoScreen() {
         cardHeight.value = withSpring(0);
       } else {
         translateX.value = withSpring(0);
+        rotate.value = withSpring(0);
       }
     });
 
   const handleRespawnCard = () => {
+    rotate.value = 0;
     translateX.value = 0;
     opacity.value = 1;
     cardHeight.value = 400;
   };
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ translateX: translateX.value }],
+    transform: [
+      { translateX: translateX.value },
+      { rotate: `${rotate.value}deg` },
+    ],
     opacity: opacity.value,
     height: cardHeight.value,
   }));

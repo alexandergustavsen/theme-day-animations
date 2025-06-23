@@ -3,7 +3,7 @@ import { ThemedView } from "@/components/ThemedView";
 import React from "react";
 import { StyleSheet } from "react-native";
 
-export default function LayoutExploreScreen() {
+export default function ExploreSandboxScreen() {
   return (
     <ThemedView style={styles.container}>
       <ThemedText type="defaultSemiBold">✨ Get Creative ✨</ThemedText>
