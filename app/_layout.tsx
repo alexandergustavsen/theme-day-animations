@@ -28,31 +28,31 @@ export default function RootLayout() {
         <Stack screenOptions={{ headerBackButtonDisplayMode: "minimal" }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen
-            name="advanced-demo"
+            name="(demo)/advanced-demo"
             options={{ headerTitle: "Advanced Demo" }}
           />
           <Stack.Screen
-            name="reanimated-demo"
+            name="(demo)/reanimated-demo"
             options={{ headerTitle: "Reanimated Demo" }}
           />
           <Stack.Screen
-            name="skia-demo"
+            name="(demo)/skia-demo"
             options={{ headerTitle: "Skia Demo" }}
           />
           <Stack.Screen
-            name="explore-buttons"
+            name="(explore)/explore-buttons"
             options={{ headerTitle: "Buttons" }}
           />
           <Stack.Screen
-            name="explore-layouts"
+            name="(explore)/explore-layouts"
             options={{ headerTitle: "Layouts" }}
           />
           <Stack.Screen
-            name="explore-gestures"
+            name="(explore)/explore-gestures"
             options={{ headerTitle: "Gestures" }}
           />
           <Stack.Screen
-            name="explore-sandbox"
+            name="(explore)/explore-sandbox"
             options={{ headerTitle: "Sandbox" }}
           />
           <Stack.Screen name="+not-found" />
